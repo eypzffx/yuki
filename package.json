@@ -1,27 +1,14 @@
 {
   "name": "yuki",
-  "version": "3.3.3",
-  "description": "Yuki simple multi device WhatsApp Bot.",
-  "main": "./index.js",
-  "scripts": {
-    "start": "pm2 start . --attach --name yuki",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.0",
+  "description": "Whatsapp Bot",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Akshay-Eypz/izumi-bot.git"
+  "jest": {
+    "verbose": true
   },
-  "keywords": [
-    "bot",
-    "izumi",
-    "Eypz"
-  ],
-  "author": "EYPZ",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/Akshay-Eypz/izumi-bot/issues"
-  },
-  "homepage": "https://github.com/Akshay-Eypz/izumi-bot#readme",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@google/generative-ai": "^0.5.0",
@@ -50,5 +37,31 @@
     "socket.io-client": "^4.8.1",
     "stream-buffers": "^3.0.3",
     "sqlite3": "^5.1.7"
+  },
+  "scripts": {
+    "start": "pm2 start index.js --name yuki && pm2 logs yuki",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/X-Electra/X-Asena.git"
+  },
+  "keywords": [
+    "bot",
+    "whatsapp"
+  ],
+  "author": "Neeraj-x0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/X-Electra/X-Asena/issues"
+  },
+  "homepage": "https://github.com/X-Electra/X-Asena#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "@types/jest": "^29.5.12",
+    "eslint": "^9.4.0",
+    "globals": "^15.4.0",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
   }
 }
