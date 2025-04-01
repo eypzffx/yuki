@@ -1,9 +1,6 @@
 const { command, isPrivate } = require("../../lib/");
 const util = require('util');
-const { saveMessage,
-  loadMessage,
-  saveChat,
-  getName, } = require("./database/StoreDb.js");
+const { saveMessage, loadMessage, saveChat, getName } = require("../database/StoreDb.js");
 const config = require ('../../config')
 command({pattern: '> ?(.*)', fromMe: true,dontAddCommandList: true, desc: 'Run js code (evel)', type: 'misc'}, async (message, match, client) => {return});
 command({on: 'text', fromMe: true, dontAddCommandList: true,desc: 'Run js code (evel)', type: 'misc'}, async (message, match, client) => {
